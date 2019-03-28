@@ -17,7 +17,7 @@ let z;
 console.log(typeof personalName,typeof age,typeof awesome,typeof rating,
     typeof x, typeof y, typeof z);
 //es6 using template strings
-const summary = `Hello my name is ${name} I am ${age} and I have a ${rating} rating`;
+const summary = `Hello my name is ${personalName} I am ${age} and I have a ${rating} star rating`;
 console.log(summary);
 //const.length gives the length of a string
 console.log(personalName.length, summary.length);
@@ -89,4 +89,52 @@ console.log(personalName.split(''));
  ];
  console.log(arrayPeople[1].id)
 
+ //For loops
+ //3 parameters assignent of variable, condition to be met, 
+ //incriments
 
+ for(let i=0; i<=10; i++){
+    console.log(`for loop ${i}`)
+ };
+
+ //while loop
+
+ let i = 0;
+ while(i<=10){
+     console.log(`while loop ${i}`);
+     i++
+ }
+
+ for(let i=0; i<arrayPeople.length; i++){
+     console.log(`for loop ${arrayPeople[i].name}`);
+ }
+
+ //alternative is forOf
+ for(let x of arrayPeople){
+     console.log(`for of ${x.name}`)
+ };
+
+ //forEach, map, filter
+ arrayPeople.forEach(function(personsName) {
+        console.log(`for Each ${personsName.name}`);
+ });
+
+ //map
+ const nameArray = arrayPeople.map(function(personsName){
+    return personsName.name;
+ });
+ console.log(nameArray);
+
+ //filter
+ const onlyCool = arrayPeople.filter(function(personCoolness){
+    return personCoolness.cool === true;
+ });
+ console.log(onlyCool);
+ 
+ //combbining it all
+ const onlyCoolName = arrayPeople.filter(function(personCoolness){
+    return personCoolness.cool === true;
+ }).map(function(name){
+     return name.name;
+ });
+ console.log(onlyCoolName);
