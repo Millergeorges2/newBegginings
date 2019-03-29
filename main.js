@@ -138,3 +138,50 @@ console.log(personalName.split(''));
      return name.name;
  });
  console.log(onlyCoolName);
+
+ //conditionals
+
+ // || < this means OR && << this means AND
+ const theNumber = 20;
+
+if( theNumber == 10 ){
+    console.log(`the numer is ${theNumber}`);
+} else if(theNumber< 10){
+    console.log(`the numer was less than 10`)
+} else {
+    console.log(`the numer was greater than 10`)
+};
+
+//terinary
+const determine = 9;
+// if X > 10 ? <this means then, : <this means else
+
+// const color = determine > 10 ? 'red' : 'blue '
+// console.log(color);
+const color = 'green'
+
+//switches
+switch(color) {
+    case 'red':
+    console.log('color is red');
+    break;
+    case 'blue':
+    console.log('color is blue');
+    break;
+    default: 
+    console.log(`color is neither red nor blue it is ${color}`);
+    break;
+}
+//simple 
+function additionMachine(x, y){
+    return x + y
+
+}
+console.log(additionMachine(10, 99));
+
+//Arrow function
+
+const additoinArrow = (x, y) => {
+    return x + y
+}
+console.log(additoinArrow(9, 20));
