@@ -68,6 +68,7 @@ console.log(personalName.split(''));
 
   //can add new things to emails
  person.email = 'milla@gmail'
+ console.log(`this is person and email was added ${person.address.street}`)
 
  // this is not assinging a new person const but pulling name from 
  //OG const
@@ -185,3 +186,41 @@ const additoinArrow = (x, y) => {
     return x + y
 }
 console.log(additoinArrow(9, 20));
+
+// function Person(firstName, lastName, dob){
+//     this.firstName = firstName;
+//     this.lastName = lastName
+//     this.dob = dob;
+//     //function inside the object, not ideal so we can use .prototype
+// };
+
+// Person.prototype.getFullName = function(){
+//     return `${this.firstName}  ${this.lastName}`
+// }
+// //now we can call the meathod like so ~~
+
+// const onePerson = new Person('James', 'Joe', '4-3-2013');
+
+// console.log(onePerson)
+
+// console.log(onePerson.getFullName());
+
+
+//ES6
+class Person {
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = dob;
+    }
+    
+    getFullName(){
+        return `${this.firstName}  ${this.lastName}` 
+    }
+}
+
+const onePerson = new Person('James', 'Joe', '4-3-2013');
+
+console.log(onePerson)
+
+console.log(onePerson.getFullName());
